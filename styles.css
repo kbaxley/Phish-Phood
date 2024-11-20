@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    box-sizing: border-box; 
+    padding: 0;
+}
+
+.navContainer {
+    background-color: black;
+    color: lightblue;
+    box-sizing: 40px;
+    padding: 40px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.title {
+    font-size: 2rem; 
+    font-weight: bold; 
+}
+
+.nav {
+    display: flex; 
+    gap: 20px; 
+    list-style-type: none;
+}
+
+.nav a {
+    color: lightblue;
+    text-decoration: none;
+    font-size: 1.5rem;
+}   
+
+.nav a:hover {
+    color: white; 
+    text-decoration: underline;
+}
+
+.greetingMessage {
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    margin: 40px;
+    
+}
+
+.containerMain {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#weather {
+    flex-wrap: nowrap;
+    font-size: 2rem;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: lightblue;
+}
+
+.placeholder {
+    background-color: red;
+}
+
