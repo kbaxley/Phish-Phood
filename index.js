@@ -16,12 +16,14 @@ function getWeather() {
 function responseReceivedHandler() {
     let weatherInfo = document.getElementById("weather");
     if (this.status === 200) {
-        console.log("Yes")
         weatherInfo.innerHTML = 
-            "<p>Current temp: " + this.response.current.temp_f + " &deg;F</p>" + 
-            "<p>Desc: " + this.response.current.condition.text + "</p>" +  
+            "<p>Updated: " + this.response.current.last_updated + "</p>" +
+            "<p>Current temperature: " + this.response.current.temp_f + " &deg;F</p>" + 
+            "<p>Feels like: " + this.response.current.feelslike_f + " &deg;F</p>" + 
+            "<p>Condition: " + this.response.current.condition.text + "</p>" +  
             "<p>Humidity: " + this.response.current.humidity + "%</p>"; 
     } else {
         weatherInfo.innerHTML = "Weather data unavailable.";
     }
 }
+

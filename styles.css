@@ -5,7 +5,7 @@
 }
 
 .navContainer {
-    background-color: black;
+    background-color: #182325;
     color: lightblue;
     display: flex; 
     justify-content: space-between; 
@@ -63,7 +63,9 @@
     font-size: 2rem;
     border: 2px solid black;
     border-radius: 10px;
-    background-color: lightblue;
+    background-color: #182325;
+    height: 500px;
+    color: lightblue;
 }
 
 #weather > p {
@@ -104,4 +106,49 @@
 }
 .right {
     float: right;
+}
+
+.fishPicture {
+    grid-area: picture;
+    background-image: url(images/bassPic.jpg);
+    background-size: cover;
+}
+.fishName {
+    grid-area: name;
+}
+.species {
+    grid-area: species;
+
+}
+.fishDescription {
+    grid-area: description;
+
+}
+.preferredCondition {
+    grid-area: condition;
+}
+.preferredBait {
+    grid-area: bait;
+}
+
+.gridLayout1, .gridLayout2{
+    border-bottom: 5px dotted black;
+    padding: 30px 0 30px 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 150px 150px 150px;
+    grid-template-areas: 
+    "picture description condition"
+    "picture description condition"
+    "name description bait"
+    "species description bait";
+}
+
+.gridLayout1 > div, .gridLayout2 > div {
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 10px;
 }
