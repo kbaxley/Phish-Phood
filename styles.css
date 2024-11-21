@@ -21,7 +21,7 @@
 }
 
 .title {
-    font-size: 2rem; 
+    font-size: 2.5rem; 
     font-weight: bold; 
 }
 
@@ -91,4 +91,17 @@
     color: lightBlue;
 
     text-decoration: none;
+}
+.block {
+    margin: 20px;
+}
+.left {
+    float: left;
+}
+.block + p {
+    font-size: 1.5rem;
+    margin: 30px
+}
+.right {
+    float: right;
 }
