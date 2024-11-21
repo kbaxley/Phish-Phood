@@ -7,11 +7,17 @@
 .navContainer {
     background-color: black;
     color: lightblue;
-    box-sizing: 40px;
-    padding: 40px;
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
+    padding: 40px 30px 40px 30px;
+    border: 2px solid black;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.logo {
+    height: 200px;
+    width: 200px;
 }
 
 .title {
@@ -21,14 +27,14 @@
 
 .nav {
     display: flex; 
-    gap: 20px; 
+    gap: 30px; 
     list-style-type: none;
 }
 
 .nav a {
     color: lightblue;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }   
 
 .nav a:hover {
@@ -47,11 +53,12 @@
 
 .containerMain {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 3fr;
     gap: 20px;
 }
 
 #weather {
+    margin-left: 20px;
     flex-wrap: nowrap;
     font-size: 2rem;
     border: 2px solid black;
@@ -59,7 +66,29 @@
     background-color: lightblue;
 }
 
-.placeholder {
-    background-color: red;
+#weather > p {
+    padding-left: 20px;
 }
 
+.footerContainer {
+    display: flex;
+    border: 0px solid black;
+    border-radius: 20px 20px 0px 0px;
+    margin: 100px 0 0 0;
+    background-color: black;
+}
+
+.footerList {
+    display: flex;
+    gap: 20px;
+}
+.footerList > li{
+    color: lightBlue;
+    list-style-type: none;
+}
+
+.footerList > li a{
+    color: lightBlue;
+
+    text-decoration: none;
+}
