@@ -1,22 +1,14 @@
-document.addEventListener("DOMContentLoaded", getWeather);
-
-let question1 = document.getElementById("q1");
-let question2 = document.getElementById("q2");
-let question3 = document.getElementById("q3");
-let question4 = document.getElementById("q4");
-
-question1.addEventListener("click", unhide);
-
-
-function unhide() {
-    let answer1 = document.getElementById("answer1")
-    if (answer1.hidden){
-        answer1.hidden = false;
-    }
-    else {
-        answer1.hidden = false;
-    }
-}
+document.addEventListener("DOMContentLoaded", () => {
+    getWeather();
+    let questions = document.querySelectorAll(".faqs button");
+    questions.forEach(element => {
+        let answer = element.nextElementSibling;
+        answer.hidden = true;
+        element.addEventListener("click", () => {
+            answer.hidden = !answer.hidden;
+        });
+    });
+});
 
 function getWeather() {
     let endpoint = "https://api.weatherapi.com/v1/current.json";
