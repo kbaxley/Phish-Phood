@@ -131,7 +131,7 @@
     float: right;
 }
 
-/* Glossery Styling */
+/* Glossary Styling */
 /* ------------------- */
 
 .fishPicture {
@@ -170,6 +170,18 @@
     "species description bait";
 }
 
+.speciesItem{
+    border-bottom: 5px dotted black;
+    padding: 30px 0 30px 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 150px 150px 150px;
+    grid-template-areas: 
+    "picture description condition"
+    "picture description condition"
+    "name description bait"
+    "species description bait";
+}
 .gridLayout1 > div, .gridLayout2 > div, .gridLayout3 > div {
     margin: 10px;
     border: 2px solid black;

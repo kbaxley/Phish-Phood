@@ -1,0 +1,96 @@
+{
+  "lake_name": "Lake Virginia",
+  "location": "Winter Park, Florida",
+  "fish_species": [
+    {
+      "common_name": "Largemouth Bass",
+      "scientific_name": "Micropterus salmoides",
+      "average_size": "1-4 pounds",
+      "trophy_size": "Over 8 pounds",
+      "preferred_habitat": "Vegetated areas, submerged structures",
+      "diet": "Fish, frogs, insects",
+      "fishing_methods": [
+        "Topwater lures",
+        "Plastic worms",
+        "Spinnerbaits"
+      ],
+      "peak_season": "Spring and fall",
+      "regulations": {
+        "bag_limit": "5 per day",
+        "size_limit": "14-inch minimum"
+      }
+    },
+    {
+      "common_name": "Bluegill",
+      "scientific_name": "Lepomis macrochirus",
+      "average_size": "0.25-0.5 pounds",
+      "trophy_size": "Over 1 pound",
+      "preferred_habitat": "Shallow waters with vegetation",
+      "diet": "Insects, small invertebrates",
+      "fishing_methods": [
+        "Live worms",
+        "Crickets",
+        "Small jigs"
+      ],
+      "peak_season": "Spring and summer",
+      "regulations": {
+        "bag_limit": "50 per day",
+        "size_limit": "No minimum"
+      }
+    },
+    {
+      "common_name": "Black Crappie",
+      "scientific_name": "Pomoxis nigromaculatus",
+      "average_size": "0.5-1 pound",
+      "trophy_size": "Over 2 pounds",
+      "preferred_habitat": "Deeper waters near structures",
+      "diet": "Small fish, insects",
+      "fishing_methods": [
+        "Minnows",
+        "Jigs",
+        "Spinners"
+      ],
+      "peak_season": "Winter and early spring",
+      "regulations": {
+        "bag_limit": "25 per day",
+        "size_limit": "10-inch minimum"
+      }
+    },
+    {
+      "common_name": "Channel Catfish",
+      "scientific_name": "Ictalurus punctatus",
+      "average_size": "2-5 pounds",
+      "trophy_size": "Over 10 pounds",
+      "preferred_habitat": "Deep holes, areas with current",
+      "diet": "Fish, crustaceans, plant material",
+      "fishing_methods": [
+        "Cut bait",
+        "Chicken liver",
+        "Stink baits"
+      ],
+      "peak_season": "Summer",
+      "regulations": {
+        "bag_limit": "No limit",
+        "size_limit": "No minimum"
+      }
+    },
+    {
+      "common_name": "Redear Sunfish",
+      "scientific_name": "Lepomis microlophus",
+      "average_size": "0.5-1 pound",
+      "trophy_size": "Over 2 pounds",
+      "preferred_habitat": "Sandy bottoms, near vegetation",
+      "diet": "Snails, insects",
+      "fishing_methods": [
+        "Live worms",
+        "Crickets",
+        "Small jigs"
+      ],
+      "peak_season": "Spring and summer",
+      "regulations": {
+        "bag_limit": "50 per day",
+        "size_limit": "No minimum"
+      }
+    }
+  ]
+}
