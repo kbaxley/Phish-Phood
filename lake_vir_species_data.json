@@ -15,6 +15,14 @@
         "Spinnerbaits"
       ],
       "peak_season": "Spring and fall",
+      "preferred_weather_conditions": {
+        "feeding_temperature": "65-80°F",
+        "spawning_temperature": "62-75°F"
+      },
+      "peak_feeding_times": {
+        "daily": ["Early morning", "Late evening"],
+        "seasonal": "Spring and fall"
+      },
       "regulations": {
         "bag_limit": "5 per day",
         "size_limit": "14-inch minimum"
@@ -33,6 +41,14 @@
         "Small jigs"
       ],
       "peak_season": "Spring and summer",
+      "preferred_weather_conditions": {
+        "feeding_temperature": "70-85°F",
+        "spawning_temperature": "75-85°F"
+      },
+      "peak_feeding_times": {
+        "daily": ["Morning", "Late afternoon"],
+        "seasonal": "Late spring and summer"
+      },
       "regulations": {
         "bag_limit": "50 per day",
         "size_limit": "No minimum"
@@ -51,6 +67,14 @@
         "Spinners"
       ],
       "peak_season": "Winter and early spring",
+      "preferred_weather_conditions": {
+        "feeding_temperature": "70-75°F",
+        "spawning_temperature": "62-65°F"
+      },
+      "peak_feeding_times": {
+        "daily": ["Dawn", "Dusk"],
+        "seasonal": "Late winter and early spring"
+      },
       "regulations": {
         "bag_limit": "25 per day",
         "size_limit": "10-inch minimum"
@@ -69,6 +93,14 @@
         "Stink baits"
       ],
       "peak_season": "Summer",
+      "preferred_weather_conditions": {
+        "feeding_temperature": "70-85°F",
+        "spawning_temperature": "72-82°F"
+      },
+      "peak_feeding_times": {
+        "daily": ["Nighttime"],
+        "seasonal": "Summer"
+      },
       "regulations": {
         "bag_limit": "No limit",
         "size_limit": "No minimum"
@@ -87,6 +119,14 @@
         "Small jigs"
       ],
       "peak_season": "Spring and summer",
+      "preferred_weather_conditions": {
+        "feeding_temperature": "65-80°F",
+        "spawning_temperature": "70-80°F"
+      },
+      "peak_feeding_times": {
+        "daily": ["Morning"],
+        "seasonal": "Late spring and early summer"
+      },
       "regulations": {
         "bag_limit": "50 per day",
         "size_limit": "No minimum"

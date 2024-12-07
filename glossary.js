@@ -4,16 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
           const response = await fetch("lake_vir_species_data.json");
           const data = await response.json();
-        //   console.log(data); // Use the data here
-          return data; // You can return the data for further use
+          return data; 
         } catch (error) {
           console.error("Error fetching JSON:", error);
         }
       }
-
-    // const data = fetchData();
-    // const speciesData = data.fish_species;
-    // console.log(speciesData);
 
     async function main() {
         const data = await fetchData();
@@ -21,12 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const fishGrid = document.getElementById("gridContainer");
         speciesData.forEach(species => {
             const speciesItem = document.createElement('div');
+            const imageFile = replaceSpace(species.common_name);
             speciesItem.classList.add('speciesItem');
-            console.log(species.common_name);
-
             speciesItem.innerHTML= `
                 <div class="speciesItem">
-                <img src="images/basspic.jpg" class="fishPicture" alt="Fish Picture">
+                <img src="images/${imageFile}.jpg" class="fishPicture" alt="Fish Picture">
                     <div class="fishName">${species.common_name}</div> 
                     <div class="species">${species.scientific_name}</div>
                     <div class="fishDescription">${species.common_name} Description</div>
@@ -38,6 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         })
       }
-      
-      main(); // Start the process
+
+    function replaceSpace(input){
+      const output = input.replace(/ /g, "_");
+      return output;
+    }
+    
+      main(); 
 });
