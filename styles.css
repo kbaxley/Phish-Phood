@@ -17,6 +17,10 @@
     border: 2px solid black;
     border-radius: 0px 0px 20px 20px;
 }
+#navBar{
+    background-color: #182325;
+    color: whitesmoke;
+}
 
 .logo {
     height: 200px;
@@ -53,6 +57,13 @@
 .nav a:hover {
     color: white; 
     text-decoration: underline;
+}
+
+.subtitle{
+    padding-top: 20px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 40px;
 }
 /* ------------------- */
 
@@ -143,28 +154,8 @@
 
 /* Glossary Styling */
 /* ------------------- */
-
-.fishPicture {
-    grid-area: picture;
-    background-image: url(images/bassPic.jpg);
-    background-size: cover;
-}
-.fishName {
-    grid-area: name;
-}
-.species {
-    grid-area: species;
-
-}
-.fishDescription {
-    grid-area: description;
-
-}
-.preferredCondition {
-    grid-area: condition;
-}
-.preferredBait {
-    grid-area: bait;
+#glossContainer{
+    background-color: rgb(112, 173, 112);
 }
 
 .gridLayout1, .gridLayout2, .gridLayout3{
@@ -182,8 +173,8 @@
 
 .speciesItem{
     border-bottom: 5px dotted black;
-    padding: 30px 0 30px 0;
-    display: grid;
+    padding: 30px 30px 30px 30px;
+    display: block;
     grid-template-columns: auto auto auto;
     grid-template-rows: 150px 150px 150px;
     grid-template-areas: 

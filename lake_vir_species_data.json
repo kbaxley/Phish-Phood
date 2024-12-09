@@ -5,14 +5,15 @@
     {
       "common_name": "Largemouth Bass",
       "scientific_name": "Micropterus salmoides",
+      "description": "Largemouth bass are highly sought-after freshwater game fish known for their explosive strikes and powerful fights. They are found in vegetated areas and submerged structures, making them a favorite for anglers.",
       "average_size": "1-4 pounds",
       "trophy_size": "Over 8 pounds",
       "preferred_habitat": "Vegetated areas, submerged structures",
       "diet": "Fish, frogs, insects",
       "fishing_methods": [
         "Topwater lures",
-        "Plastic worms",
-        "Spinnerbaits"
+        " Plastic worms",
+        " Spinnerbaits"
       ],
       "peak_season": "Spring and fall",
       "preferred_weather_conditions": {
@@ -20,7 +21,7 @@
         "spawning_temperature": "62-75°F"
       },
       "peak_feeding_times": {
-        "daily": ["Early morning", "Late evening"],
+        "daily": ["Early morning", " Late evening"],
         "seasonal": "Spring and fall"
       },
       "regulations": {
@@ -31,14 +32,15 @@
     {
       "common_name": "Bluegill",
       "scientific_name": "Lepomis macrochirus",
+      "description": "Bluegill are colorful, small panfish commonly found in freshwater lakes and ponds. They are easy to catch, making them a favorite for beginner anglers and children.",
       "average_size": "0.25-0.5 pounds",
       "trophy_size": "Over 1 pound",
       "preferred_habitat": "Shallow waters with vegetation",
       "diet": "Insects, small invertebrates",
       "fishing_methods": [
         "Live worms",
-        "Crickets",
-        "Small jigs"
+        " Crickets",
+        " Small jigs"
       ],
       "peak_season": "Spring and summer",
       "preferred_weather_conditions": {
@@ -46,7 +48,7 @@
         "spawning_temperature": "75-85°F"
       },
       "peak_feeding_times": {
-        "daily": ["Morning", "Late afternoon"],
+        "daily": ["Morning", " Late afternoon"],
         "seasonal": "Late spring and summer"
       },
       "regulations": {
@@ -57,14 +59,15 @@
     {
       "common_name": "Black Crappie",
       "scientific_name": "Pomoxis nigromaculatus",
+      "description": "Black crappie are a schooling fish prized for their delicate white meat and subtle flavor. They are often found near structures in deeper waters and are especially active during winter and early spring.",
       "average_size": "0.5-1 pound",
       "trophy_size": "Over 2 pounds",
       "preferred_habitat": "Deeper waters near structures",
       "diet": "Small fish, insects",
       "fishing_methods": [
         "Minnows",
-        "Jigs",
-        "Spinners"
+        " Jigs",
+        " Spinners"
       ],
       "peak_season": "Winter and early spring",
       "preferred_weather_conditions": {
@@ -72,7 +75,7 @@
         "spawning_temperature": "62-65°F"
       },
       "peak_feeding_times": {
-        "daily": ["Dawn", "Dusk"],
+        "daily": ["Dawn", " Dusk"],
         "seasonal": "Late winter and early spring"
       },
       "regulations": {
@@ -83,14 +86,15 @@
     {
       "common_name": "Channel Catfish",
       "scientific_name": "Ictalurus punctatus",
+      "description": "Channel catfish are bottom-dwelling fish known for their whisker-like barbels and ability to thrive in various environments. They are popular for their flavorful meat and can be caught using a variety of bait.",
       "average_size": "2-5 pounds",
       "trophy_size": "Over 10 pounds",
       "preferred_habitat": "Deep holes, areas with current",
       "diet": "Fish, crustaceans, plant material",
       "fishing_methods": [
         "Cut bait",
-        "Chicken liver",
-        "Stink baits"
+        " Chicken liver",
+        " Stink baits"
       ],
       "peak_season": "Summer",
       "preferred_weather_conditions": {
@@ -109,14 +113,15 @@
     {
       "common_name": "Redear Sunfish",
       "scientific_name": "Lepomis microlophus",
+      "description": "Redear sunfish, often called 'shellcrackers,' are known for their habit of feeding on snails and other shelled prey. They are a larger sunfish species and are commonly found near sandy bottoms with vegetation.",
       "average_size": "0.5-1 pound",
       "trophy_size": "Over 2 pounds",
       "preferred_habitat": "Sandy bottoms, near vegetation",
       "diet": "Snails, insects",
       "fishing_methods": [
         "Live worms",
-        "Crickets",
-        "Small jigs"
+        " Crickets",
+        " Small jigs"
       ],
       "peak_season": "Spring and summer",
       "preferred_weather_conditions": {
