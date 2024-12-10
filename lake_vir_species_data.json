@@ -22,7 +22,7 @@
       },
       "peak_feeding_times": {
         "daily": ["Early morning", " Late evening"],
-        "seasonal": "Spring and fall"
+        "seasonal": ["spring", "fall"]
       },
       "regulations": {
         "bag_limit": "5 per day",
@@ -49,7 +49,7 @@
       },
       "peak_feeding_times": {
         "daily": ["Morning", " Late afternoon"],
-        "seasonal": "Late spring and summer"
+        "seasonal": ["spring", "summer"]
       },
       "regulations": {
         "bag_limit": "50 per day",
@@ -76,7 +76,7 @@
       },
       "peak_feeding_times": {
         "daily": ["Dawn", " Dusk"],
-        "seasonal": "Late winter and early spring"
+        "seasonal": ["winter", "spring"]
       },
       "regulations": {
         "bag_limit": "25 per day",
@@ -103,7 +103,7 @@
       },
       "peak_feeding_times": {
         "daily": ["Nighttime"],
-        "seasonal": "Summer"
+        "seasonal": ["summer"]
       },
       "regulations": {
         "bag_limit": "No limit",
@@ -130,7 +130,7 @@
       },
       "peak_feeding_times": {
         "daily": ["Morning"],
-        "seasonal": "Late spring and early summer"
+        "seasonal": ["spring","summer"]
       },
       "regulations": {
         "bag_limit": "50 per day",
