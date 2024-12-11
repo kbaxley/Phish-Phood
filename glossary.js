@@ -1,5 +1,5 @@
 
-
+// Page initialization
 document.addEventListener("DOMContentLoaded", () => {
 
   async function fetchData() {
@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   
+  // Display Fish Glossary
   async function main() {
       const data = await fetchData();
       const speciesData = data.fish_species;
@@ -53,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     }
   
+  // Convert Species Name to Filename for image fetch
   function replaceSpace(input){
     const output = input.replace(/ /g, "_");
     return output;
