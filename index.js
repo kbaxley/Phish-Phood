@@ -201,8 +201,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
     feedingTemp = feedingTemp.substring(0, 5);
     feedingTemp = feedingTemp.split("-");
-    minFeedTemp = feedingTemp[0];
-    maxFeedTemp = feedingTemp[1];
+    var minFeedTemp = feedingTemp[0];
+    var maxFeedTemp = feedingTemp[1];
   
     if(minFeedTemp <= currentTemp && currentTemp <= maxFeedTemp){
       isFeedTemp = "success";
