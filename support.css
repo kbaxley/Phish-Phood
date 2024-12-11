@@ -5,12 +5,12 @@
     padding: 0;
 }
 
-html, body {
+/* html, body {
     height: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
-}
+} */
 
 .faqContainer {
     display: grid;
@@ -43,7 +43,7 @@ html, body {
 .answers {
     font-size: 1.2rem;
     margin: 0.5rem 1.2rem 0.5rem 1.2rem;
-    text-align: center;
+    text-align: left;
     display: none;
 }
 
@@ -55,12 +55,12 @@ html, body {
 .navContainer {
     background-color: #182325;
     color: whitesmoke;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px;
-    padding: 40px 30px 40px 30px;
-    border-radius: 35px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 5px 30px 5px 30px;
+    border: 2px solid black;
+    border-radius: 0px 0px 20px 20px;
 }
 
 #navBar{
@@ -69,8 +69,8 @@ html, body {
 }
 
 .logo {
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
 }
 
 .title {
@@ -82,6 +82,7 @@ html, body {
 
 .title-link {
     text-decoration: none;
+    margin-left: 250px;
 }
 
 .title-link:visited {
@@ -119,9 +120,11 @@ html, body {
     color: whitesmoke;
     display: flex;
     justify-content: space-between;
-    border-radius: 35px;
-    margin: 2rem 1rem 1rem 1rem;
+    border-radius: 30px 30px 0px 0px;
+    padding: 5px 30px 10px 30px;
+    margin-top: 50px;
 }
+
 
 .footerList {
     display: flex;
@@ -150,3 +153,14 @@ html, body {
 .gridRight, .gridLeft {
     margin: 2rem;
 }
+
+.socialLogo {
+    height: 50px;
+    width: 50px;
+    padding: 5px 5px 5px 5px;
+}
+
+.socialIcons{
+    align-items: right;
+}
+

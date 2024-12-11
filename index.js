@@ -65,17 +65,27 @@ document.addEventListener("DOMContentLoaded", () => {
           const checkFeedTemp = checkFeedingTemp(species.preferred_weather_conditions.feeding_temperature)
           speciesItem.classList.add('speciesItem');
           speciesItem.innerHTML= `
-          <li class="list-group-item">
-              <ul class="list-group">
-                  <h3 class="fw-bold lh-1 mb-3">${species.common_name}</h3>
-                  <li class="list-group-item list-group-item-info"><strong>Preferred Habitat: </strong>${species.preferred_habitat}.</li>
-                  <li class="list-group-item list-group-item-info"><strong>Preferred Bait: </strong>${species.fishing_methods}.</li>
-                  <li class="list-group-item list-group-item-${checkPeakSeason}"><strong>Peak Season: </strong>${species.peak_season}.</li>
-                  <li class="list-group-item list-group-item-${checkFeedTemp}"><strong>Preferred Feeding Temp: </strong>${species.preferred_weather_conditions.feeding_temperature}.</li>
-                  <li class="list-group-item list-group-item-${checkPeakDaily}"><strong>Peak Feeding Times: </strong>${species.peak_feeding_times.daily}.</li>
-                  <div class="d-grid gap-2 d-md-flex justify-content-md-start"></div>
-              </ul>
-            </li>
+          <div class="row">
+          <div class="col-6">
+            <li class="list-group-item">
+                <ul class="list-group">
+                    <h3 class="fw-bold lh-1 mb-3">${species.common_name}</h3>
+                    <li class="list-group-item list-group-item-info"><strong>Preferred Habitat: </strong>${species.preferred_habitat}.</li>
+                    <li class="list-group-item list-group-item-info"><strong>Preferred Bait: </strong>${species.fishing_methods}.</li>
+                    <li class="list-group-item list-group-item-${checkPeakSeason}"><strong>Peak Season: </strong>${species.peak_season}.</li>
+                    <li class="list-group-item list-group-item-${checkFeedTemp}"><strong>Preferred Feeding Temp: </strong>${species.preferred_weather_conditions.feeding_temperature}.</li>
+                    <li class="list-group-item list-group-item-${checkPeakDaily}"><strong>Peak Feeding Times: </strong>${species.peak_feeding_times.daily}.</li>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start"></div>
+                </ul>
+              </li>
+            </div>
+            <div class="col-4 d-flex justify-content-center align-items-center">
+              <img src="images/${imageFile}.jpg" 
+                  class="d-block img-fluid float-right" 
+                  alt="${species.common_name} Illustration" 
+                  width="700" height="500" loading="lazy">
+            </div>
+            </div>
             <div class="b-example-divider"></div>
           `;
           fishGrid.appendChild(speciesItem);
