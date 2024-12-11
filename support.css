@@ -1,0 +1,143 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    box-sizing: border-box; 
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.faqContainer {
+    flex: 1; /* Ensures main takes the remaining space, pushing the footer down */
+}
+
+/* Styling for header */
+/* ------------------- */
+.navContainer {
+    background-color: #182325;
+    color: whitesmoke;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 20px;
+    padding: 40px 30px 40px 30px;
+    border-radius: 35px;
+}
+#navBar{
+    background-color: #182325;
+    color: whitesmoke;
+}
+
+.logo {
+    height: 200px;
+    width: 200px;
+}
+
+.title {
+    font-size: 2.5rem; 
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.title-link {
+    text-decoration: none;
+}
+.title-link:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.nav {
+    display: flex; 
+    gap: 30px; 
+    list-style-type: none;
+}
+
+.nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 2rem;
+}   
+
+.nav a:hover {
+    color: white; 
+    text-decoration: underline;
+}
+
+.subtitle{
+    padding-top: 20px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 40px;
+}
+
+
+/* Footer Styling */ 
+/* ------------------- */
+.footerContainer {
+    background-color: #182325;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 35px;
+    margin: 2rem 1rem 1rem 1rem;
+
+}
+
+.footerList {
+    display: flex;
+    font-size: 1.5rem;
+    padding-top: 20px;
+    padding-right: 20px;
+    gap: 20px;
+}
+.footerList > li{
+    color: whitesmoke;
+    list-style-type: none;
+}
+
+.footerList > li a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+/* Main Design */
+.faqContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 1.5rem;  
+}
+
+.faqContainer h2 {
+    font-size: 2rem;
+    margin: 1.2rem;
+    text-align: center;
+}
+
+.gridRight, .gridLeft {
+    margin: 2rem;
+}
+
+.faqs button {
+    font-size: 1.3rem;
+    width: 100%;
+    padding: 1.5rem;
+    margin: .5rem;
+    font-weight: 400;
+    text-align: left;
+    border-radius: .7rem;
+    background-color: lightgray;
+    color: #182325;
+}
+
+.answers {
+    font-size: 1.2rem;
+    margin: .5rem 1.2rem .5rem 1.2rem;
+    text-align: center;
+}

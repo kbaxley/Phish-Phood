@@ -13,9 +13,9 @@
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
+    margin: 20px;
     padding: 40px 30px 40px 30px;
-    border: 2px solid black;
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 35px;
 }
 #navBar{
     background-color: #182325;
@@ -114,8 +114,9 @@
     color: whitesmoke;
     display: flex;
     justify-content: space-between;
-    border-radius: 20px 20px 0 0;
-    margin-top: 50px;
+    border-radius: 35px;
+    margin: 2rem 1rem 1rem 1rem;
+
 }
 
 .footerList {
@@ -195,7 +196,6 @@
 
 .faqContainer{
     display: grid;
-    grid-template-rows: auto auto;
     grid-template-columns: auto auto;
 }
 .faqContainer h2 {
@@ -206,6 +206,7 @@
 .gridRight, .gridLeft{
     margin: 20px;
 }
+
 
 .faqs button{
     width: 100%;
@@ -218,4 +219,5 @@
     color: #182325;
 
 }
+
 
