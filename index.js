@@ -1,5 +1,6 @@
 var currentTemp = 999;
 
+// Page Initialization 
 document.addEventListener("DOMContentLoaded", () => {
     getWeather();
     displayFish();
@@ -13,70 +14,76 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-function getWeather() {
-    let endpoint = "https://api.weatherapi.com/v1/current.json";
-    let apiKey = "0ca83b3ecfb748a181a162322241811";
-    let queryString = "key=" + apiKey + "&q=32789";
-    let url = endpoint + "?" + queryString;
- 
-    let xhr = new XMLHttpRequest();
-    xhr.addEventListener("load", responseReceivedHandler);
-    xhr.addEventListener("load", setCurrentTemp);
-    xhr.responseType = "json";
-    xhr.open("GET", url);
-    xhr.send();
-}
+  // Weather API Call
+  function getWeather() {
+      let endpoint = "https://api.weatherapi.com/v1/current.json";
+      let apiKey = "0ca83b3ecfb748a181a162322241811";
+      let queryString = "key=" + apiKey + "&q=32789";
+      let url = endpoint + "?" + queryString;
+  
+      let xhr = new XMLHttpRequest();
+      xhr.addEventListener("load", responseReceivedHandler);
+      xhr.addEventListener("load", setCurrentTemp);
+      xhr.responseType = "json";
+      xhr.open("GET", url);
+      xhr.send();
+  }
 
-function responseReceivedHandler() {
-    let weatherInfo = document.getElementById("weather");
-    if (this.status === 200) {
-        weatherInfo.innerHTML = 
-            "<p>Updated: <span class=\"r\">" + this.response.current.last_updated + "</span></p>" +
-            "<p>Temperature: <span class=\"r\">"  + this.response.current.temp_f + "&deg;F</span></p>" + 
-            "<p>Feels like: <span class=\"r\">" + this.response.current.feelslike_f + "&deg;F</span></p>" + 
-            "<p>Condition: <span class=\"r\">" + this.response.current.condition.text + "</span></p>" +  
-            "<p>Humidity: <span class=\"r\">" + this.response.current.humidity + "</span></p>"; 
-    } else {
-        weatherInfo.innerHTML = "Weather data unavailable.";
+  // Weather API Handler
+  function responseReceivedHandler() {
+      let weatherInfo = document.getElementById("weather");
+      if (this.status === 200) {
+          weatherInfo.innerHTML = 
+              "<p>Updated: <span class=\"r\">" + this.response.current.last_updated + "</span></p>" +
+              "<p>Temperature: <span class=\"r\">"  + this.response.current.temp_f + "&deg;F</span></p>" + 
+              "<p>Feels like: <span class=\"r\">" + this.response.current.feelslike_f + "&deg;F</span></p>" + 
+              "<p>Condition: <span class=\"r\">" + this.response.current.condition.text + "</span></p>" +  
+              "<p>Humidity: <span class=\"r\">" + this.response.current.humidity + "</span></p>"; 
+      } else {
+          weatherInfo.innerHTML = "Weather data unavailable.";
+      }
+  }
+
+  // Set Current Temp Global Variable
+  function setCurrentTemp(){
+    if(this.status === 200){
+      currentTemp = this.response.current.temp_f;
     }
-}
-
-function setCurrentTemp(){
-  if(this.status === 200){
-    currentTemp = this.response.current.temp_f;
-  }
-}
-
-async function displayFish() {
-    const data = await fetchData();
-    const speciesData = data.fish_species;
-    const fishGrid = document.getElementById("algoGrid");
-    speciesData.forEach(species => {
-        const speciesItem = document.createElement('div');
-        const imageFile = replaceSpace(species.common_name);
-        const checkPeakSeason = checkSeason(species.peak_feeding_times.seasonal);
-        const checkPeakDaily = checkPeakFeedingTime(species.peak_feeding_times.daily);
-        const checkFeedTemp = checkFeedingTemp(species.preferred_weather_conditions.feeding_temperature)
-        speciesItem.classList.add('speciesItem');
-        speciesItem.innerHTML= `
-        <li class="list-group-item">
-            <ul class="list-group">
-                <h3 class="fw-bold lh-1 mb-3">${species.common_name}</h3>
-                <li class="list-group-item list-group-item-info"><strong>Preferred Habitat: </strong>${species.preferred_habitat}.</li>
-                <li class="list-group-item list-group-item-info"><strong>Preferred Bait: </strong>${species.fishing_methods}.</li>
-                <li class="list-group-item list-group-item-${checkPeakSeason}"><strong>Peak Season: </strong>${species.peak_season}.</li>
-                <li class="list-group-item list-group-item-${checkFeedTemp}"><strong>Preferred Feeding Temp: </strong>${species.preferred_weather_conditions.feeding_temperature}.</li>
-                <li class="list-group-item list-group-item-${checkPeakDaily}"><strong>Peak Feeding Times: </strong>${species.peak_feeding_times.daily}.</li>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start"></div>
-             </ul>
-          </li>
-          <div class="b-example-divider"></div>
-        `;
-        fishGrid.appendChild(speciesItem);
-
-    })
   }
 
+  // Display Fish 
+  async function displayFish() {
+      const data = await fetchData();
+      const speciesData = data.fish_species;
+      const fishGrid = document.getElementById("algoGrid");
+      speciesData.forEach(species => {
+          const speciesItem = document.createElement('div');
+          const imageFile = replaceSpace(species.common_name);
+          // Set Traffic Light Labelling
+          const checkPeakSeason = checkSeason(species.peak_feeding_times.seasonal);
+          const checkPeakDaily = checkPeakFeedingTime(species.peak_feeding_times.daily);
+          const checkFeedTemp = checkFeedingTemp(species.preferred_weather_conditions.feeding_temperature)
+          speciesItem.classList.add('speciesItem');
+          speciesItem.innerHTML= `
+          <li class="list-group-item">
+              <ul class="list-group">
+                  <h3 class="fw-bold lh-1 mb-3">${species.common_name}</h3>
+                  <li class="list-group-item list-group-item-info"><strong>Preferred Habitat: </strong>${species.preferred_habitat}.</li>
+                  <li class="list-group-item list-group-item-info"><strong>Preferred Bait: </strong>${species.fishing_methods}.</li>
+                  <li class="list-group-item list-group-item-${checkPeakSeason}"><strong>Peak Season: </strong>${species.peak_season}.</li>
+                  <li class="list-group-item list-group-item-${checkFeedTemp}"><strong>Preferred Feeding Temp: </strong>${species.preferred_weather_conditions.feeding_temperature}.</li>
+                  <li class="list-group-item list-group-item-${checkPeakDaily}"><strong>Peak Feeding Times: </strong>${species.peak_feeding_times.daily}.</li>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-start"></div>
+              </ul>
+            </li>
+            <div class="b-example-divider"></div>
+          `;
+          fishGrid.appendChild(speciesItem);
+
+      })
+    }
+
+  // Fetch Info From Local JSON File
   async function fetchData() {
     try {
       const response = await fetch("lake_vir_species_data.json");
@@ -87,11 +94,13 @@ async function displayFish() {
     }
   }
 
+  // Convert Species Name to Filename for image fetch
   function replaceSpace(input){
     const output = input.replace(/ /g, "_");
     return output;
   }
 
+  // Determine if current season matches input seasons
   function checkSeason(seasons){
     var currentSeason = "";
     var currentDate = new Date();
@@ -139,7 +148,7 @@ async function displayFish() {
     });
     return isSeason;
   }
-
+  // Determine if current time matches input feeding times
   function checkPeakFeedingTime(feedingTimes) {
     var isPeak = "danger";
     var currentFeedingTime = "";
@@ -186,6 +195,7 @@ async function displayFish() {
     return isPeak;
   }
 
+  // Determine if current temp matches input feeding temp
   function checkFeedingTemp(feedingTemp){
     var isFeedTemp = "danger";
   
