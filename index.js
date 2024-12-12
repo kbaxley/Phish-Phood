@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
       speciesData.forEach(species => {
           const speciesItem = document.createElement('div');
           const imageFile = replaceSpace(species.common_name);
+          
           // Set Traffic Light Labelling
           const checkPeakSeason = checkSeason(species.peak_feeding_times.seasonal);
           const checkPeakDaily = checkPeakFeedingTime(species.peak_feeding_times.daily);
@@ -67,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
           speciesItem.innerHTML= `
           <div class="row">
           <div class="col-6">
-            <li class="list-group-item">
+            <li class="list-group-item shadow">
                 <ul class="list-group">
                     <h3 class="fw-bold lh-1 mb-3">${species.common_name}</h3>
                     <li class="list-group-item list-group-item-info"><strong>Preferred Habitat: </strong>${species.preferred_habitat}.</li>

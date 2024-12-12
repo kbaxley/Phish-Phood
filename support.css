@@ -5,19 +5,12 @@
     padding: 0;
 }
 
-/* html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-} */
-
 .faqContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
     margin: 2rem;
-    flex: 1; /* Ensures main takes the remaining space, pushing the footer down */
+    flex: 1; 
 }
 
 .faqs button {
